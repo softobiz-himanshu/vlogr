@@ -33,7 +33,7 @@ on:
 
 env:
   AWS_REGION: us-east-1                   # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: 099755600066.dkr.ecr.us-east-1.amazonaws.com/vlogr-api-dev:latest          # set this to your Amazon ECR repository name
+  ECR_REPOSITORY: 099755600066.dkr.ecr.us-east-1.amazonaws.com/vlogr-api-dev          # set this to your Amazon ECR repository name
   ECS_SERVICE: vlogr-api-service-dev                 # set this to your Amazon ECS service name
   ECS_CLUSTER: Vlogr-ECS-cluster-dev          # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: .aws/taskdef.json # set this to the path to your Amazon ECS task definition
@@ -81,7 +81,7 @@ jobs:
       with:
         task-definition: ${{ env.ECS_TASK_DEFINITION }}
         container-name: ${{ env.CONTAINER_NAME }}
-        image: $ECR_REPOSITORY
+        image: 099755600066.dkr.ecr.us-east-1.amazonaws.com/vlogr-api-dev
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
