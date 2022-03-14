@@ -1,0 +1,1 @@
+export enum LineType { elements = 'elements', audios = 'audios', texts = 'texts' }
