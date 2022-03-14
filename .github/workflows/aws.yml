@@ -36,7 +36,7 @@ env:
   ECR_REPOSITORY: 099755600066.dkr.ecr.us-east-1.amazonaws.com/vlogr-api-dev:latest          # set this to your Amazon ECR repository name
   ECS_SERVICE: vlogr-api-service-dev                 # set this to your Amazon ECS service name
   ECS_CLUSTER: Vlogr-ECS-cluster-dev          # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: /container-definations/taskdef.json # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION: vlogr-task-defination-api-dev:6 # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: vlogr-api-dev           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
